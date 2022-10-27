@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="../scripts/storage.js"></script>
+    <script src="../scripts/modal.js"></script>
+
+    <title>Page1</title>
+</head>
+<body>
+    <div class="page">
+        <header>
+           <h1 class="album__title">Personal smartphones</h1>
+           <h2 class="slogan__text">Making communication easier</h2>
+
+        </header>
+
+        <main>
+           
+            <article class="questionnaire">
+                <p class="questions__style">Просим Вас принять участие в маркетинговом исследовании по выявлению предппочтений покупателей сотовых телефонов и ответить на поставленные в анкете вопросы :)</p>
+                <form id="form">
+                    <label>
+                        Ваше имя:
+                        <input type="text" name="name" id="name" placeholder="Райан Гослинг" required pattern="[A-Za-zА-Яа-яЁё]+">
+
+                    </label>
+                    <p></p>
+
+
+                    <label id="birthdate">
+                        Дата Вашего рождения:
+                        <input type="datetime-local" name="birthdate" id="birthdate" value="1999-06-12T19:30" min="1900-02-21T00:00" max="2022-10-29T00:00" required>
+
+                    </label>
+                    <p></p>
+                    <label id="brand">
+                        Какой марки Ваш сотовый телефон:
+                       <select id="selest-option" name="selest1">
+
+                        <option value="Samsung Galaxy">Samsung Galaxy</option>
+                        <option value="Apple">Apple</option>
+                        <option value="Xiaomi">Xiaomi</option>
+                        <option value="HONOR">HONOR</option>
+                        <option value="HUAWEI">HUAWEI</option>
+                        <option value="Google Pixel">Google Pixel</option>
+                        <option value="Poco">Poco</option>
+                        <option value="Redmi">Redmi</option>
+                        <option value="Другое">Другое</option>
+                       </select>
+                        
+                    </label>
+
+                    <p></p>
+                    <p> Как часто Вы приобретаете новый мобильный телефон?</p>
+
+                    <label>
+                       
+                        <input type="checkbox" name="frequency1" id="checkbox1" value="раз в год и чаще">Pаз в год и чаще 
+                    </label>
+                    <br>
+
+                    <label>
+                       
+                        <input type="checkbox" name="frequency2" id="checkbox2" value="раз в 2-3 года">Pаз в 2-3 года 
+                    </label>
+                    <br>
+
+                    <label>
+                       
+                        <input type="checkbox" name="frequency3" id="checkbox3" value="раз в 3 года и реже">Pаз в 3 года и реже
+                    </label>
+                    <br>
+
+                    <label>
+                       
+                        <input type="checkbox" name="frequency4" id="checkbox4" value="пользуюсь телефоном пока не сломается/потеряется">Пользуюсь телефоном пока не сломается/потеряется
+                    </label>
+                    <br>
+
+                    <p>Если бы Вам в ближайшее время необходимо было приобрести сотовый телефон, какую максимальную цену Вы готовы были бы заплатить?</p>
+                    <label for="radio">
+                        <input type="radio" name="price" id="radio" value="до 100$">До 100$
+                        
+                    </label>
+                    <br>
+                    <label for="radio">
+                        <input type="radio" name="price" id="radio" value="от 100$ до 200$">от 100$ до 200$
+                        
+                    </label>
+                    <br>
+                    <label for="radio">
+                        <input type="radio" name="price" id="radio" value="от 200$ до 500$">от 200$ до 500$
+                        
+                    </label>
+                    <br>
+                    <label for="radio">
+                        <input type="radio" name="price" id="radio" value="более 500$">более 500$
+                        
+                    </label>
+                    <br>
+
+
+                    <p>Оцените ваш опыт использования текущего смартфона:</p>
+
+                    <p><textarea rows="10" cols="45" id= "text" name="text" required pattern="[A-Za-zА-Яа-яЁё]+"></textarea></p>
+
+                    <button type="submit" value="submit">Отправить</button>
+                    <button type="reset" value="reset">Очистить форму</button>
+
+
+                </form>
+            </article>
+
+            <nav class="middle__block">
+                
+                <a href="#">Узнать больше...</a>
+            </nav>
+
+            <nav class="right__block" id="nav">
+                <button id="nav__button_modal-open" class="button">Результаты</button>
+            </nav>
+
+            <div id="section__modal" class="modal">
+                <div class="section__modal-header">
+                    <h1">Результаты анкетирования</h1>
+                    <span id="section__modal_header-сlose" class="close">&times;</span>
+                </div>
+                <table class ="result__table" id="section__table"></table>
+                <div>
+                    <label for="section__input_list">Неймы чуваков</label>
+                    <input list="section__datalist" id="section__input_list" name="section__input_list">
+                    <datalist id="section__datalist"></datalist>
+                </div>
+           </div>
+
+        </main>
+
+        <footer>
+
+            <p>footer</p>
+        </footer>
+
+
+
+
+    </div>
+    
+    
+</body>
+</html>
