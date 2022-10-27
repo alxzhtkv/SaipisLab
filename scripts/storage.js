@@ -18,13 +18,13 @@ function retrieveFormValue(event) {
         });
 
         const values = {
-            name: form.elements.name.value,
-            birthdate: form.elements.birthdate.value,
-            selest1: form.elements.selest1.value,
+            name: document.getElementById('name').value,
+            birthdate: document.getElementById('birthdate').value,
+            selest1: document.getElementById('selest-option').value,
             checkboxes: box,
 
-            price: form.elements.price.value,
-            text: form.elements.text.value
+            price: document.getElementById('radio').value,
+            text: document.getElementById('text').value
         };
         arrayValue.push(values);
         localStorage.setItem('arr', JSON.stringify(arrayValue));
